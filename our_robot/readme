@@ -1,0 +1,35 @@
+(一)the two packages qt_publsih and rviz_subscribe cooperate to use qt_panel to control OUR robot motion in Rviz.Steps as follow:
+1.roslanuch our_moveit_config demo.lanuch
+2.rosrun our_robot qt_publish
+3.rosrun our_robot rviz_subscribe
+
+(二)the tutorial "Plan a trajectory to control the OUR robot motion in the Rviz" need the follow steps:
+1.roslaunch our_moveit_config demo.launch
+2.rosrun our_robot rviz_subscribe
+2.rosrun our_robot kdl_rviz
+
+(三)the tutorial "Plan a trajectory to control the OUR robot motion in real world" need the follow steps:
+1.roslaunch our_moveit_config demo.launch
+2.rosrun our_basic joint_control
+2.rosrun our_robot kdl_rviz
+
+(四)The package sub_jointState_pub_moveJ_6 ： subscribe the JointState topic and publish the moveJ topic
+1.roslaunch our_moveit_config demo.launch(modify use_gui=ture)
+2.rosrun our_robot sub_jointState_pub_moveJ_6
+3.rosrun our_basic joint_control
+Now drag the control gui to control the robot motion in the rviz and real world
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
