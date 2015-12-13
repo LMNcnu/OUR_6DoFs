@@ -1,0 +1,1 @@
+注释了CMakeLsit.txt中的#FIND_PACKAGE(OUR_API REQUIRED)；并且改了名字
