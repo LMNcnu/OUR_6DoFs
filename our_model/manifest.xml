@@ -1,0 +1,6 @@
+<package>
+  <description brief="our_model">our_model</description>
+  <depend package="gazebo" />
+  <author>me</author>
+  <license>BSD</license>
+</package>
