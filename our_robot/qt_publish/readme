@@ -1,0 +1,4 @@
+mainwindow.h中注释掉//#include <jointcontrolcanbus.h>同时去掉下面的 //JointControlCanBus *m_jointContorlHandler;
+CMakeList.txt中该路径和文件名
+注释mainwindow.cpp中//  m_jointContorlHandler(new JointControlCanBus()),
+

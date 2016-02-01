@@ -1,0 +1,33 @@
+(一)对于qt_publsih和rviz_subscribe配合演示面板控制robot在rviz中运动步骤：
+1.roslanuch our_moveit_config demo.lanuch
+2.rosrun our_robot qt_publish
+3.rosrun our_robot rviz_subscribe
+(二)对于kdl_rviz显示的是正运动学，改程序中的某关节幅度值，然后运行lanuch文件显示运动轨迹
+roslanuch our_robot kdl_rviz.lanuch
+
+11月25日修改程序，将plan的轨迹点发布到our_basic/joint_control中moveJ话题上，便可以控制机器臂了
+0.roslaunch our_moveit_config demo.launch
+1.rosrun our_basic joint_control真机器臂订阅
+2.rosrun our_robot rviz_subscribe//rviz订阅
+2.rosrun our_robot kdl_rviz
+
+(三)对于Ik显示的逆运动学，打印最终逆解（个关节最终幅度值）
+1.roslanuch our_robot IK.lanuch
+2.plan and execute
+3.press keyboard "a"
+4.see terminal IK information
+(四)three_state_circulation循环在三个位置间
+roslaunch our_robot three_state_circulation.launch
+(五)action_server  qq邮件里的(邵哥发的)
+(六)plan_publish   发waypoints.positions给rviz_subscribe和our_basic中的joint_control
+roslaunch our_robot plan_publish    就会启动demo.launch和rviz_subscribe节点/joint_control节点和plan_publish节点
+a恢复，b执行到默认位置
+(七)DragInRviz_MoveReal 
+roslaunch out_robot DragInRviz_MoveReal.launch   启动demo.launch和rviz_subscribe节点/joint_control节点和DragInRviz_MoveReal节点
+a,恢复；b，执行到默认位置；c，拖拽plan and execute，然后press c again；d，print the current position 
+(八)sub_jointState_pub_moveJ_6  subscribe the JointState topic and publish the moveJ topic
+1.roslaunch our_moveit_config demo.launch(modify use_gui=ture)
+2.rosrun our_robot sub_jointState_pub_moveJ_6
+3.rosrun our_basic joint_control
+now drag the control gui to control the robot motion in the rviz and real world
+

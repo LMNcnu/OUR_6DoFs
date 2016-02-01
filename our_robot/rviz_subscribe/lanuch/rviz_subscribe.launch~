@@ -1,0 +1,8 @@
+<launch>
+
+  <include file="$(find our_moveit_config)/launch/demo.launch"/>
+
+  <node name="kdl_rviz" pkg="our_robot" type="kdl_rviz" respawn="false" output="screen">
+  </node>
+
+</launch>
