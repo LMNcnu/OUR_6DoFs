@@ -12,6 +12,11 @@ void chatterCallback(const std_msgs::Float32MultiArray::ConstPtr &msg)
 
   bool isSent = jointContorlHandler->setTagPosRadio(0x05, msg->data[5], MODEL_TYPE_J60, CMDTYPE_WR_NR);
   ROS_INFO("Sent successfully? %d", isSent);
+  jointContorlHandler->setTagPosRadio(0x02, msg->data[1], MODEL_TYPE_J80, CMDTYPE_WR_NR);
+  jointContorlHandler->setTagPosRadio(0x03, msg->data[2], MODEL_TYPE_J80, CMDTYPE_WR_NR);
+  jointContorlHandler->setTagPosRadio(0x04, msg->data[3], MODEL_TYPE_J60, CMDTYPE_WR_NR);
+  jointContorlHandler->setTagPosRadio(0x05, msg->data[4], MODEL_TYPE_J60, CMDTYPE_WR_NR);
+  jointContorlHandler->setTagPosRadio(0x06, msg->data[5], MODEL_TYPE_J60, CMDTYPE_WR_NR);
 
 //    for(int i=0; i < ARM_DOF/2; ++i)
 //    {
