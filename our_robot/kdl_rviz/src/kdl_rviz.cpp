@@ -66,53 +66,9 @@ int main(int argc, char **argv)
       }
   }
 
-
- group.stop();//don't research the meanning.
-//  group.asyncExecute(my_plan);
-  sleep(5.0); //Sleep to give Rviz time to visualize the plan.  
-
   ros::shutdown();  
   return 0;
 
-  //moveit_msgs::DisplayTrajectory d;
-
-//my_plan.trajectory_.joint_trajectory.points.
-
-
-/*
-
-//#include <moveit/planning_scene_interface/planning_scene_interface.h>
-//#include <moveit_msgs/DisplayRobotState.h>
-//#include <moveit_msgs/DisplayTrajectory.h>
-
-//设置一个末端执行器的位置（这种方式就是表示末端位置？）
-  geometry_msgs::Pose target_pose1;
-  target_pose1.orientation.w = 1.0;
-  target_pose1.position.x = 0.28;
-  target_pose1.position.y = -0.7;
-  target_pose1.position.z = 1.0;
-  group.setPoseTarget(target_pose1);
-
-
-//规划路径并在rviz中显示
-  moveit::planning_interface::MoveGroup::Plan my_plan;
-  bool success = group.plan(my_plan);//自动显示
-
-  ROS_INFO("Visualizing plan 1 (pose goal) %s",success?"":"FAILED");    
-  
-  sleep(5.0);
-
-// 手动再显示一次,首先创建一个publisher在rviz中显示规划.
-  ros::Publisher display_publisher = node_handle.advertise<moveit_msgs::DisplayTrajectory>("/move_group/display_planned_path", 1, true);
-  moveit_msgs::DisplayTrajectory display_trajectory;
-  if (1)
-  {
-    ROS_INFO("Visualizing plan 1 (again)");    
-    display_trajectory.trajectory_start = my_plan.start_state_;
-    display_trajectory.trajectory.push_back(my_plan.trajectory_);
-    display_publisher.publish(display_trajectory);
-
-    sleep(5.0);
-  }*/
+ 
 
 }
