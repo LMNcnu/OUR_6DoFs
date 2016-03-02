@@ -6,10 +6,10 @@ project(our_robot)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS actionlib_msgs actionlib moveit_core moveit_ros_planning moveit_ros_planning_interface pluginlib cmake_modules)
 
-add_action_files(
-  DIRECTORY action_server/action
-  FILES FollowJointTrajectory.action
-)#action_server需要的
+#add_action_files(
+#  DIRECTORY action_server/action
+#  FILES FollowJointTrajectory.action
+#)#action_server需要的
 
 find_package(Boost REQUIRED system filesystem date_time thread)
 
